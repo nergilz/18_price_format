@@ -28,7 +28,7 @@ from format_price import format_price
 format_price(price)
 ```
 
-#### return main()
+#### example return format_price()
 ```python
 '1 234 56.78'
 ```
