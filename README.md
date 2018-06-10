@@ -22,10 +22,10 @@ None
 
 ### For use this script in your project
 ```python
-import format_price
+from format_price import format_price
 ```
 ```python
-format_price.main(price)
+format_price(price)
 ```
 
 #### return main()
@@ -43,16 +43,17 @@ python -m unittest -v tests.py
 
 ### Result tests
 ```bash
-test1_main (tests.FormatPriceTest) ... ok
-test2_main_int (tests.FormatPriceTest) ... ok
-test3_main (tests.FormatPriceTest) ... ok
-test4_main (tests.FormatPriceTest) ... ok
-test5_main (tests.FormatPriceTest) ... ok
-test6_main (tests.FormatPriceTest) ... ok
-test7_main (tests.FormatPriceTest) ... ok
+test1_string_of_float (tests.FormatPriceTest) ... ok
+test2_integer (tests.FormatPriceTest) ... ok
+test3_float (tests.FormatPriceTest) ... ok
+test4_bin_string_of_float (tests.FormatPriceTest) ... ok
+test5_float_with_letter_in_string (tests.FormatPriceTest) ... ok
+test6_string_of_munber_with_duble_dot (tests.FormatPriceTest) ... ok
+test7_bin_string_of_number_with_duble_dot (tests.FormatPriceTest) ... ok
+test8_isinstance (tests.FormatPriceTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.001s
+Ran 8 tests in 0.001s
 
 OK
 ```
