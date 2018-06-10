@@ -22,7 +22,7 @@ class FormatPriceTest(unittest.TestCase):
     def test6_float_with_letter_in_string(self):
         self.assertIsNone(format_price('1234ghj.rt567'))
 
-    def test7_string_of_munber_with_duble_dot(self):
+    def test7_string_of_number_with_duble_dot(self):
         self.assertIsNone(format_price('1234.567.89'))
 
     def test8_bin_string_of_number_with_duble_dot(self):
@@ -39,6 +39,9 @@ class FormatPriceTest(unittest.TestCase):
 
     def test12_price_is_set_of_string(self):
         self.assertIsNone(format_price(('67.45', '234.56')))
+
+    def test13_price_is_str_of_number_with_many_zero(self):
+        self.assertEqual(format_price('7895.000000000'), '7 895.0')
 
 
 if __name__ == '__main__':
