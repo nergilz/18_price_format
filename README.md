@@ -43,17 +43,21 @@ python -m unittest -v tests.py
 
 ### Result tests
 ```bash
+test10_price_is_list_of_number (tests.FormatPriceTest) ... ok
+test11_price_is_dict (tests.FormatPriceTest) ... ok
+test12_price_is_set_of_string (tests.FormatPriceTest) ... ok
 test1_string_of_float (tests.FormatPriceTest) ... ok
 test2_integer (tests.FormatPriceTest) ... ok
 test3_float (tests.FormatPriceTest) ... ok
-test4_bin_string_of_float (tests.FormatPriceTest) ... ok
-test5_float_with_letter_in_string (tests.FormatPriceTest) ... ok
-test6_string_of_munber_with_duble_dot (tests.FormatPriceTest) ... ok
-test7_bin_string_of_number_with_duble_dot (tests.FormatPriceTest) ... ok
-test8_isinstance (tests.FormatPriceTest) ... ok
+test4_rounding_of_a_number (tests.FormatPriceTest) ... ok
+test5_bin_string_of_float (tests.FormatPriceTest) ... ok
+test6_float_with_letter_in_string (tests.FormatPriceTest) ... ok
+test7_string_of_munber_with_duble_dot (tests.FormatPriceTest) ... ok
+test8_bin_string_of_number_with_duble_dot (tests.FormatPriceTest) ... ok
+test9_isinstance (tests.FormatPriceTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.001s
+Ran 12 tests in 0.001s
 
 OK
 ```
