@@ -13,28 +13,18 @@ def get_argument():
     return parser.parse_args()
 
 
-def check_type(price):
-
-    if isinstance(price, str) or isinstance(price, int) or isinstance(price, float):
-        return price
-
-    else:
-        return None
-
-
 def format_price(price):
 
-    if check_type(price):
-        try:
-            price = round(float(price), 4)
+    try:
+        price = round(float(price), 2)
 
-        except ValueError:
-            return None
-
-        return '{:,}'.format(price).replace(',', ' ')
-
-    else:
+    except ValueError:
         return None
+
+    except TypeError:
+        return None
+
+    return '{:,}'.format(price).replace(',', ' ')
 
 
 if __name__ == '__main__':
