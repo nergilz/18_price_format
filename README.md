@@ -49,6 +49,9 @@ test12_price_is_set_of_string (tests.FormatPriceTest) ... ok
 test13_price_is_str_of_number_with_many_zero (tests.FormatPriceTest) ... ok
 test14_price_is_number_with_many_zero (tests.FormatPriceTest) ... ok
 test15_result_not_none (tests.FormatPriceTest) ... ok
+test16_price_is_boolean_true (tests.FormatPriceTest) ... ok
+test17_price_is_boolean_false (tests.FormatPriceTest) ... ok
+test18_price_is_object_none (tests.FormatPriceTest) ... ok
 test1_string_of_float (tests.FormatPriceTest) ... ok
 test2_integer (tests.FormatPriceTest) ... ok
 test3_float (tests.FormatPriceTest) ... ok
@@ -60,7 +63,7 @@ test8_bin_string_of_number_with_double_dot (tests.FormatPriceTest) ... ok
 test9_isinstance (tests.FormatPriceTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.002s
+Ran 18 tests in 0.004s
 
 OK
 ```

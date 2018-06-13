@@ -15,16 +15,20 @@ def get_argument():
 
 def format_price(price):
 
-    try:
-        price = round(float(price), 2)
-
-    except ValueError:
+    if isinstance(price, bool):
         return None
 
-    except TypeError:
-        return None
+    else:
+        try:
+            price = round(float(price), 2)
 
-    return '{:,}'.format(price).replace(',', ' ')
+            if price == int(price):
+                price = int(price)
+
+        except (TypeError, ValueError):
+            return None
+
+        return '{:,}'.format(price).replace(',', ' ')
 
 
 if __name__ == '__main__':

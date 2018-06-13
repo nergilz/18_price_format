@@ -8,7 +8,7 @@ class FormatPriceTest(unittest.TestCase):
         self.assertEqual(format_price('1234567.898'), '1 234 567.9')
 
     def test2_integer(self):
-        self.assertEqual(format_price(1234567), '1 234 567.0')
+        self.assertEqual(format_price(1234567), '1 234 567')
 
     def test3_float(self):
         self.assertEqual(format_price(12345675.89), '12 345 675.89')
@@ -41,13 +41,22 @@ class FormatPriceTest(unittest.TestCase):
         self.assertIsNone(format_price(('67.45', '234.56')))
 
     def test13_price_is_str_of_number_with_many_zero(self):
-        self.assertEqual(format_price('7895.000000000'), '7 895.0')
+        self.assertEqual(format_price('7895.000000000'), '7 895')
 
     def test14_price_is_number_with_many_zero(self):
-        self.assertEqual(format_price(7895.0000000000000), '7 895.0')
+        self.assertEqual(format_price(7895.0000000000000), '7 895')
 
     def test15_result_not_none(self):
         self.assertIsNotNone(format_price('34567'))
+
+    def test16_price_is_boolean_true(self):
+        self.assertIsNone(format_price(True))
+
+    def test17_price_is_boolean_false(self):
+        self.assertIsNone(format_price(False))
+
+    def test18_price_object_is_none(self):
+        self.assertIsNone(format_price(None))
 
 
 if __name__ == '__main__':
