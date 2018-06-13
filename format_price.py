@@ -18,17 +18,16 @@ def format_price(price):
     if isinstance(price, bool):
         return None
 
-    else:
-        try:
-            price = round(float(price), 2)
+    try:
+        price = round(float(price), 2)
 
-            if price == int(price):
-                price = int(price)
+        if float.is_integer(price):
+            price = int(price)
 
-        except (TypeError, ValueError):
-            return None
+    except (TypeError, ValueError):
+        return None
 
-        return '{:,}'.format(price).replace(',', ' ')
+    return '{:,}'.format(price).replace(',', ' ')
 
 
 if __name__ == '__main__':
